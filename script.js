@@ -47,6 +47,4 @@
       if (section.id) observer.observe(section);
     });
   }
-
-  // Current year is not shown, but keep footer text easy to extend later.
 })();

@@ -15,6 +15,9 @@
   --rule: #d9d4c4;
   --rust: #b3492e;
   --rust-dim: #8f3a25;
+  /* Accent lightened for dark surfaces: #b3492e on --paper-dark is only 3.2:1.
+     #cf6a48 reaches 4.81:1, clearing WCAG AA for small text. */
+  --rust-on-dark: #cf6a48;
   --ledger: #2f4a3c;
   --paper-dark: #1c1a14;
   --ink-on-dark: #f3f1ea;
@@ -234,10 +237,11 @@ main { position: relative; }
 }
 .tag--accent { color: var(--rust); border-color: var(--rust); }
 .section--dark .tag { border-color: var(--rule-on-dark); }
+.section--dark .tag--accent { color: var(--rust-on-dark); border-color: var(--rust-on-dark); }
 
 /* ---------- Hero ---------- */
 .hero {
-  padding-top: clamp(3rem, 8vh, 6rem);
+  padding-top: clamp(2.25rem, 5.5vh, 4.25rem);
   padding-bottom: clamp(3rem, 8vh, 6rem);
   min-height: calc(100vh - var(--nav-height));
   display: flex;
@@ -281,9 +285,55 @@ main { position: relative; }
   line-height: 1.45;
   max-width: 32ch;
   color: var(--ink);
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.9rem;
 }
 .hero__ctas { display: flex; flex-wrap: wrap; gap: 0.9rem; }
+
+/* Hero ledger — the 20-second scan: what he is actually working on. */
+.hero__ledger {
+  margin-top: 2rem;
+  border-top: 1px solid var(--rule);
+  max-width: 54ch;
+}
+.hero__ledger-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.15rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.hero__ledger dt {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.hero__ledger dd {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+/* Real text-decoration, not a box-shadow rule: the underline must be
+   programmatically detectable, so links are distinguishable without colour. */
+.hero__ledger dd a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+.hero__ledger dd a:hover { color: var(--rust); text-decoration-color: var(--rust); }
+
+@media (min-width: 620px) {
+  .hero__ledger-item {
+    grid-template-columns: 8.5rem 1fr;
+    gap: 1rem;
+    align-items: baseline;
+  }
+}
 
 .hero__portrait { justify-self: center; width: 100%; max-width: 340px; }
 .portrait-frame {
@@ -367,6 +417,7 @@ main { position: relative; }
   font-family: var(--font-display); font-weight: 600; font-size: 1.3rem; margin-bottom: 0.25rem;
 }
 .timeline__role { color: var(--ink-soft); font-size: 0.98rem; }
+.timeline__note { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); }
 
 @media (min-width: 700px) {
   .timeline__item { grid-template-columns: 16px 1fr 1fr; align-items: baseline; }
@@ -410,7 +461,7 @@ main { position: relative; }
   border-top: none;
 }
 .section--dark .section__title { color: var(--ink-on-dark); }
-.section--dark .section__num { color: var(--rust); }
+.section--dark .section__num { color: var(--rust-on-dark); }
 
 .featured__kicker {
   font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase;
@@ -436,6 +487,57 @@ main { position: relative; }
   width: 100%; height: auto; display: block;
 }
 
+/* Second featured block — separated by a rule rather than a new section,
+   so the Work section reads as one body of work. */
+.featured--research {
+  margin-top: 4.5rem;
+  padding-top: 3.5rem;
+  border-top: 1px solid var(--rule-on-dark);
+}
+
+/* Ledger — bare stat tiles. No plot, so no hover layer; values carry
+   text tokens (never an accent hue), sans semibold with proportional figures. */
+.ledger {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  margin-bottom: 3.5rem;
+  border-top: 1px solid var(--rule-on-dark);
+  border-left: 1px solid var(--rule-on-dark);
+}
+.ledger__stat {
+  padding: 1.25rem 1.25rem 1.35rem;
+  border-right: 1px solid var(--rule-on-dark);
+  border-bottom: 1px solid var(--rule-on-dark);
+}
+.ledger__label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted-on-dark);
+  margin-bottom: 0.5rem;
+}
+.ledger__value {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: clamp(1.6rem, 3.4vw, 2.1rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--ink-on-dark);
+}
+.ledger__unit {
+  font-size: 0.55em;
+  font-weight: 500;
+  color: var(--muted-on-dark);
+  letter-spacing: 0;
+}
+
+@media (min-width: 760px) {
+  .ledger { grid-template-columns: repeat(4, 1fr); }
+}
+
 .process {
   display: grid; gap: 0;
   border-top: 1px solid var(--rule-on-dark);
@@ -446,7 +548,7 @@ main { position: relative; }
   padding: 1.75rem 0;
   border-bottom: 1px solid var(--rule-on-dark);
 }
-.process__num { font-family: var(--font-mono); font-size: 0.85rem; color: var(--rust); }
+.process__num { font-family: var(--font-mono); font-size: 0.85rem; color: var(--rust-on-dark); }
 .process__title { font-family: var(--font-display); font-weight: 600; font-size: 1.2rem; margin-bottom: 0.5rem; }
 .process__text { color: #c9c5b4; max-width: 60ch; font-size: 0.98rem; }
 
@@ -537,5 +639,10 @@ main { position: relative; }
   font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted);
 }
 @media (min-width: 900px) { .site-footer { padding-left: calc(var(--rail-width) + var(--edge)); } }
-.site-footer a { transition: color 0.2s var(--ease); }
+.site-footer a {
+  transition: color 0.2s var(--ease);
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px; /* comfortable tap target on touch devices */
+}
 .site-footer a:hover { color: var(--rust); }
