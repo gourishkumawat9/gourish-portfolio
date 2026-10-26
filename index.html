@@ -6,7 +6,7 @@
 <title>Gourish Kumawat — Business, Product &amp; Research</title>
 <meta name="description" content="Gourish Kumawat — BBA (Digital Business &amp; Entrepreneurship) at IIM Bangalore and B.S. (Management &amp; Public Policy) at IIM Sambalpur. Building VittamHub, researching healthcare access and water-policy O&amp;M models." />
 <meta name="author" content="Gourish Kumawat" />
-<meta name="theme-color" content="#f3f1ea" />
+<meta name="theme-color" content="#5b5896" />
 
 <!-- Update this base URL if the site is deployed somewhere other than GitHub Pages. -->
 <link rel="canonical" href="https://gourishkumawat9.github.io/gourish-portfolio/" />
@@ -17,304 +17,459 @@
 <meta property="og:image" content="https://gourishkumawat9.github.io/gourish-portfolio/assets/images/profile.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f3f1ea'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' font-weight='700' text-anchor='middle' fill='%2317160f'%3EG%3C/text%3E%3Ccircle cx='25' cy='24' r='2.4' fill='%23b3492e'/%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%235b5896'/%3E%3Ctext x='16' y='23.5' font-family='Georgia,serif' font-size='20' text-anchor='middle' fill='%23f5efe1'%3EG%3C/text%3E%3Ccircle cx='25.5' cy='7' r='2' fill='%23f5c451'/%3E%3C/svg%3E" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Bebas+Neue&family=Antonio:wght@400;500;600&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
 
 <link rel="stylesheet" href="style.css" />
+<script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- ============ NAVIGATION ============ -->
-<header class="site-nav" id="site-nav">
-  <div class="site-nav__bar">
-    <a href="#top" class="site-nav__mark" aria-label="Gourish Kumawat — back to top">GK<span class="site-nav__mark-dot">.</span></a>
+<!-- Film grain over everything — purely decorative -->
+<div class="grain" aria-hidden="true"></div>
 
-    <button class="site-nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav-links">
-      <span></span><span></span><span></span>
-      <span class="sr-only">Menu</span>
+<!-- ============ NAVIGATION ============ -->
+<header class="nav" id="site-nav">
+  <a href="#top" class="nav__mark" aria-label="Gourish Kumawat — back to top">Gourish Kumawat</a>
+  <p class="nav__status"><span class="nav__status-dot" aria-hidden="true"></span>Open to internships</p>
+
+  <div class="nav__right">
+    <button class="sound" id="sound-toggle" type="button" aria-pressed="false">
+      <span class="sound__bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span class="sound__label">Sound <span class="sound__state" aria-hidden="true">off</span></span>
     </button>
 
-    <nav class="site-nav__links" id="site-nav-links" aria-label="Primary">
-      <ol class="index-list">
-        <li><a href="#about"><span class="index-list__num">01</span>About</a></li>
-        <li><a href="#education"><span class="index-list__num">02</span>Education</a></li>
-        <li><a href="#experience"><span class="index-list__num">03</span>Experience</a></li>
-        <li><a href="#work"><span class="index-list__num">04</span>Work</a></li>
-        <li><a href="#achievements"><span class="index-list__num">05</span>Achievements</a></li>
-        <li><a href="#skills"><span class="index-list__num">06</span>Skills</a></li>
-        <li><a href="#contact"><span class="index-list__num">07</span>Contact</a></li>
-      </ol>
-      <a class="site-nav__resume" href="assets/documents/Gourish_Kumawat_Resume.pdf" download>Résumé <span aria-hidden="true">↓</span></a>
+    <nav class="nav__primary" aria-label="Primary">
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
+
+    <a class="nav__resume" href="assets/documents/Gourish_Kumawat_Resume.pdf" download>Résumé <span aria-hidden="true">↓</span></a>
+
+    <button class="nav__menu" id="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="nav__menu-label">Index</span>
+      <span class="nav__menu-icon" aria-hidden="true"><i></i><i></i></span>
+    </button>
   </div>
 </header>
 
-<!-- Fixed dossier index — desktop signature element -->
-<aside class="dossier-index" aria-hidden="true">
-  <ol class="index-list index-list--rail">
-    <li><a tabindex="-1" href="#about"><span class="index-list__num">01</span><span class="index-list__label">About</span></a></li>
-    <li><a tabindex="-1" href="#education"><span class="index-list__num">02</span><span class="index-list__label">Education</span></a></li>
-    <li><a tabindex="-1" href="#experience"><span class="index-list__num">03</span><span class="index-list__label">Experience</span></a></li>
-    <li><a tabindex="-1" href="#work"><span class="index-list__num">04</span><span class="index-list__label">Work</span></a></li>
-    <li><a tabindex="-1" href="#achievements"><span class="index-list__num">05</span><span class="index-list__label">Achievements</span></a></li>
-    <li><a tabindex="-1" href="#skills"><span class="index-list__num">06</span><span class="index-list__label">Skills</span></a></li>
-    <li><a tabindex="-1" href="#contact"><span class="index-list__num">07</span><span class="index-list__label">Contact</span></a></li>
-  </ol>
-  <div class="dossier-index__rule" aria-hidden="true"></div>
-</aside>
+<!-- Full index overlay: every section, numbered -->
+<div class="menu" id="menu" hidden>
+  <nav aria-label="All sections">
+    <ol class="menu__list">
+      <li><a href="#about"><span class="menu__num">01</span>About</a></li>
+      <li><a href="#education"><span class="menu__num">02</span>Education</a></li>
+      <li><a href="#experience"><span class="menu__num">03</span>Experience</a></li>
+      <li><a href="#work"><span class="menu__num">04</span>Work</a></li>
+      <li><a href="#achievements"><span class="menu__num">05</span>Achievements</a></li>
+      <li><a href="#skills"><span class="menu__num">06</span>Skills</a></li>
+      <li><a href="#contact"><span class="menu__num">07</span>Contact</a></li>
+    </ol>
+    <div class="menu__foot">
+      <a href="assets/documents/Gourish_Kumawat_Resume.pdf" download>Résumé <span aria-hidden="true">↓</span></a>
+      <a href="https://www.linkedin.com/in/gourish-kumawat-948322313/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+    </div>
+  </nav>
+</div>
+
+<!-- Scroll ruler — a duplicate of the nav, so hidden from assistive tech and the tab order -->
+<div class="ruler" aria-hidden="true">
+  <div class="ruler__ticks"></div>
+  <div class="ruler__labels">
+    <a tabindex="-1" href="#top" data-target="top">Hello</a>
+    <a tabindex="-1" href="#about" data-target="about">About</a>
+    <a tabindex="-1" href="#experience" data-target="experience">Experience</a>
+    <a tabindex="-1" href="#work" data-target="work">Work</a>
+    <a tabindex="-1" href="#skills" data-target="skills">Skills</a>
+    <a tabindex="-1" href="#contact" data-target="contact">Contact</a>
+  </div>
+  <div class="ruler__head"></div>
+</div>
 
 <main id="main">
 
-  <!-- ============ HERO ============ -->
-  <section class="hero" id="top">
-    <p class="hero__eyebrow">Case file — Gourish Kumawat / 2026</p>
+  <!-- ============ HERO — the head opens as you scroll ============ -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="hero__stage">
 
-    <div class="hero__grid">
-      <div class="hero__text">
-        <h1 class="hero__name">Gourish<br />Kumawat</h1>
-        <p class="hero__role">Business &amp; Entrepreneurship Student<br class="hero__role-break" />
-          <span class="hero__role-tags">Product <span class="dot" aria-hidden="true">·</span> Strategy <span class="dot" aria-hidden="true">·</span> Entrepreneurship</span>
-        </p>
-        <p class="hero__statement">Interested in building products, understanding customers, and turning ideas into practical businesses.</p>
-
-        <div class="hero__ctas">
-          <a href="#work" class="btn btn--primary">View my work</a>
-          <a href="assets/documents/Gourish_Kumawat_Resume.pdf" class="btn btn--ghost" download>Résumé <span aria-hidden="true">↓</span></a>
-          <a href="https://www.linkedin.com/in/gourish-kumawat-948322313/" class="btn btn--ghost" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
-        </div>
-
-        <dl class="hero__ledger">
-          <div class="hero__ledger-item">
-            <dt>Building</dt>
-            <dd><a href="#vittamhub">VittamHub</a> — a fintech product concept for startup–investor trust</dd>
-          </div>
-          <div class="hero__ledger-item">
-            <dt>Researching</dt>
-            <dd><a href="#ruhs">Healthcare access in Jaipur</a> — independent quantitative research</dd>
-          </div>
-          <div class="hero__ledger-item">
-            <dt>Interned at</dt>
-            <dd><a href="#experience">Youth4Water Plus</a> — water-policy research, UNICEF-supported project</dd>
-          </div>
-        </dl>
+      <div class="sky" aria-hidden="true">
+        <div class="stars" data-stars="70"></div>
+        <svg class="birds" viewBox="0 0 220 80" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+          <path class="bird" d="M4 52 q10 -10 20 0 q10 -10 20 0" />
+          <path class="bird" d="M62 40 q9 -9 18 0 q9 -9 18 0" />
+          <path class="bird" d="M120 18 q11 -11 22 0 q11 -11 22 0" />
+          <path class="bird" d="M110 58 q8 -8 16 0 q8 -8 16 0" />
+          <path class="bird" d="M176 44 q7 -7 14 0 q7 -7 14 0" />
+        </svg>
       </div>
 
-      <figure class="hero__portrait">
-        <div class="portrait-frame">
-          <img src="assets/images/profile.jpg" alt="Portrait of Gourish Kumawat" id="profile-photo"
-               onerror="this.closest('.portrait-frame').classList.add('portrait-frame--empty')" />
-          <div class="portrait-frame__placeholder" aria-hidden="true">
-            <span>GK</span>
-            <p>Add photo to<br /><code>assets/images/profile.jpg</code></p>
+      <div class="hero__title">
+        <p class="hero__eyebrow">Inside the mind of</p>
+        <div class="hero__name-wrap">
+          <h1 class="hero__name" id="hero-title"><span>Gourish</span> <span>Kumawat</span></h1>
+          <div class="select-box" aria-hidden="true">
+            <i class="select-box__h select-box__h--tl"></i><i class="select-box__h select-box__h--tr"></i>
+            <i class="select-box__h select-box__h--bl"></i><i class="select-box__h select-box__h--br"></i>
+            <span class="select-box__size" id="select-size">— × —</span>
+          </div>
+          <div class="fake-cursor" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path d="M4 2 L4 20 L9 15.5 L12.4 22.4 L15.6 20.9 L12.3 14.1 L19 14.1 Z" fill="#f5efe1" stroke="#16142e" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            <span>Gourish</span>
           </div>
         </div>
-        <figcaption>Gourish Kumawat — BBA, IIM Bangalore &amp; B.S., IIM Sambalpur</figcaption>
-      </figure>
+        <p class="hero__words"><span>Turning ideas</span> <span>into businesses</span></p>
+        <div class="hero__tagline">
+          <p class="hero__role">Business &amp; Entrepreneurship Student</p>
+          <p class="hero__role-tags">Product <span aria-hidden="true">·</span> Strategy <span aria-hidden="true">·</span> Entrepreneurship</p>
+          <p class="hero__schools">IIM Bangalore <span aria-hidden="true">×</span> IIM Sambalpur</p>
+        </div>
+      </div>
+
+      <div class="hero__figure">
+        <svg class="character" id="character" viewBox="0 0 800 780" role="img" aria-labelledby="character-title">
+          <title id="character-title">Illustration of Gourish waving hello. As you scroll, the top of his head lifts open.</title>
+          <defs>
+            <pattern id="tie-stripes" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(90)">
+              <rect width="8" height="8" fill="#3f3b7c" /><rect width="3" height="8" fill="#aaa5e0" />
+            </pattern>
+          </defs>
+          <g fill="none" stroke="#16142e" stroke-width="7" stroke-linejoin="round" stroke-linecap="round">
+            <!-- torso -->
+            <path d="M20 790 C 30 660, 110 600, 250 578 L 550 578 C 690 600, 770 660, 780 790 Z" fill="#1f1c42" />
+            <path d="M330 576 L400 718 L470 576 Z" fill="#ece8f8" />
+            <path d="M386 612 L414 612 L424 700 L400 730 L376 700 Z" fill="url(#tie-stripes)" />
+            <path d="M382 590 L418 590 L412 614 L388 614 Z" fill="url(#tie-stripes)" />
+            <path d="M338 566 L382 592 L362 628 Z" fill="#ffffff" />
+            <path d="M462 566 L418 592 L438 628 Z" fill="#ffffff" />
+            <path d="M326 572 L286 612 L322 640 L298 664 L398 742 L346 600 Z" fill="#2a2756" />
+            <path d="M474 572 L514 612 L478 640 L502 664 L402 742 L454 600 Z" fill="#2a2756" />
+            <path d="M560 690 L640 676 L646 700 L566 712 Z" fill="#1f1c42" />
+            <path d="M574 690 L590 668 L606 686 L620 670 L634 682" fill="#aaa5e0" stroke-width="5" />
+            <!-- neck -->
+            <path d="M356 470 L356 568 C 380 590, 420 590, 444 568 L444 470 Z" fill="#7a76b6" />
+            <!-- ears -->
+            <ellipse cx="262" cy="380" rx="24" ry="36" fill="#8783c4" />
+            <ellipse cx="538" cy="380" rx="24" ry="36" fill="#8783c4" />
+            <path d="M258 366 Q 250 382 262 396" stroke-width="5" />
+            <path d="M542 366 Q 550 382 538 396" stroke-width="5" />
+            <!-- face -->
+            <path d="M268 250 L532 250 L532 420 C 532 492, 482 530, 400 530 C 318 530, 268 492, 268 420 Z" fill="#8783c4" />
+            <!-- the opening, revealed when the lid lifts -->
+            <ellipse class="character__opening" cx="400" cy="250" rx="132" ry="24" fill="#2b2860" />
+            <path d="M268 252 L268 340 C 276 310, 284 282, 302 258 Z" fill="#1a1838" stroke-width="0" />
+            <path d="M532 252 L532 340 C 524 310, 516 282, 498 258 Z" fill="#1a1838" stroke-width="0" />
+            <!-- beard -->
+            <path d="M268 380 C 270 470, 322 530, 400 530 C 478 530, 530 470, 532 380 C 522 420, 506 448, 478 456 C 456 438, 344 438, 322 456 C 294 448, 278 420, 268 380 Z" fill="#2b2858" />
+            <path d="M346 452 C 366 434, 434 434, 454 452 C 430 446, 370 446, 346 452 Z" fill="#2b2858" />
+            <path d="M370 468 Q 400 500 430 468 Q 400 478 370 468 Z" fill="#f5efe1" stroke-width="5" />
+            <!-- nose + brows -->
+            <path d="M404 352 Q 390 400 400 410 Q 410 414 418 406" stroke-width="6" />
+            <path class="character__brow" d="M316 302 Q 346 286 380 300" stroke-width="13" />
+            <path class="character__brow" d="M420 300 Q 454 286 484 302" stroke-width="13" />
+            <!-- eyes -->
+            <g class="character__eyes">
+              <ellipse cx="350" cy="345" rx="27" ry="31" fill="#f5efe1" />
+              <ellipse cx="450" cy="345" rx="27" ry="31" fill="#f5efe1" />
+              <g class="character__pupils" stroke-width="0">
+                <circle cx="352" cy="341" r="11" fill="#16142e" />
+                <circle cx="452" cy="341" r="11" fill="#16142e" />
+                <circle cx="356" cy="337" r="3.5" fill="#f5efe1" />
+                <circle cx="456" cy="337" r="3.5" fill="#f5efe1" />
+              </g>
+            </g>
+            <!-- the lid: skull cap and hair -->
+            <g class="character__lid">
+              <ellipse cx="400" cy="252" rx="134" ry="25" fill="#6c68a9" />
+              <path d="M266 252 C 262 196, 278 150, 318 124 C 300 140, 296 150, 300 160 C 318 120, 360 100, 400 104 C 384 116, 380 124, 384 132 C 412 104, 466 102, 498 128 C 482 128, 474 134, 472 142 C 510 136, 540 168, 540 210 C 540 228, 536 242, 534 252 C 520 236, 506 222, 486 216 C 470 228, 440 230, 416 220 C 392 236, 350 236, 326 222 C 306 230, 284 238, 266 252 Z" fill="#1a1838" />
+              <path d="M330 150 C 350 136, 380 130, 404 134" stroke="#3a3670" stroke-width="5" />
+              <path d="M420 146 C 444 136, 470 138, 494 152" stroke="#3a3670" stroke-width="5" />
+              <path d="M300 196 C 318 178, 340 170, 362 170" stroke="#3a3670" stroke-width="5" />
+            </g>
+            <!-- waving arm -->
+            <g transform="translate(-40 0)">
+              <g class="character__arm">
+                <path d="M96 790 C 92 680, 110 560, 150 470 L 236 500 C 210 570, 196 680, 200 790 Z" fill="#1f1c42" />
+                <path d="M146 468 L 240 498 L 248 470 L 154 440 Z" fill="#ece8f8" />
+                <path d="M168 448 C 140 430, 130 400, 138 372 L 142 318 C 143 304, 162 302, 164 318 L 168 360 L 170 288 C 171 272, 192 272, 193 288 L 194 356 L 200 282 C 202 266, 222 268, 222 284 L 220 358 L 230 302 C 233 288, 252 292, 250 306 L 240 380 C 254 368, 270 360, 282 370 C 288 376, 284 384, 276 390 C 256 404, 246 430, 232 452 Z" fill="#8783c4" />
+              </g>
+            </g>
+          </g>
+        </svg>
+
+        <!-- Thoughts that float out of the open head -->
+        <ul class="thoughts" aria-hidden="true">
+          <li class="thought" data-m="-120,-40" data-x="-2.5" data-y="-0.7"><svg viewBox="0 0 32 32"><path d="M16 4a8 8 0 0 0-4.6 14.6c.9.7 1.6 1.8 1.6 3V23h6v-1.4c0-1.2.7-2.3 1.6-3A8 8 0 0 0 16 4Z"/><path d="M13 27h6M16 9v4l2 2"/></svg>Ideas</li>
+          <li class="thought" data-m="-108,-112" data-x="-2.0" data-y="-1.7"><svg viewBox="0 0 32 32"><path d="M6 26h20M9 26V17M15 26V12M21 26V8M8 13l6-5 5 3 7-6"/></svg>Strategy</li>
+          <li class="thought" data-m="-82,-188" data-x="-1.1" data-y="-2.4"><svg viewBox="0 0 32 32"><path d="M16 4s-8 9.5-8 15a8 8 0 0 0 16 0c0-5.5-8-15-8-15Z"/></svg>Water policy</li>
+          <li class="thought" data-m="38,-252" data-x="0" data-y="-2.65"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"/><path d="M11 10h10M11 14h10M18 10c3 0 3 8-4 8l6 6"/></svg>VittamHub</li>
+          <li class="thought" data-m="96,-176" data-x="1.1" data-y="-2.4"><svg viewBox="0 0 32 32"><path d="M16 29s9-8.4 9-15a9 9 0 0 0-18 0c0 6.6 9 15 9 15Z"/><circle cx="16" cy="14" r="3.5"/></svg>Research</li>
+          <li class="thought" data-m="122,-106" data-x="2.0" data-y="-1.7"><svg viewBox="0 0 32 32"><path d="M3 12 16 6l13 6-13 6-13-6Z"/><path d="M8 15v6c4 3 12 3 16 0v-6M29 12v7"/></svg>IIMs</li>
+          <li class="thought" data-m="118,-34" data-x="2.5" data-y="-0.7"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"/><path d="M9.5 7.5c3.2 4.6 3.2 12.4 0 17M22.5 7.5c-3.2 4.6-3.2 12.4 0 17"/></svg>Cricket</li>
+        </ul>
+      </div>
+
+
+      <p class="hero__scroll" aria-hidden="true"><span>Scroll to step inside</span><i></i></p>
+
+      <!-- The inside of the head grows to fill the screen -->
+      <div class="portal" aria-hidden="true"><div class="stars" data-stars="50"></div></div>
+    </div>
+  </section>
+
+  <!-- ============ NOW — what's on my mind ============ -->
+  <section class="section section--mind now" id="now" aria-labelledby="now-title">
+    <div class="stars stars--section" data-stars="40" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="kicker reveal">You're inside now</p>
+      <h2 class="now__statement reveal" id="now-title">Interested in building products, understanding customers, and turning ideas into practical businesses.</h2>
+
+      <dl class="now__ledger">
+        <div class="now__item reveal">
+          <dt>Building</dt>
+          <dd><a href="#vittamhub">VittamHub</a> <span>a fintech product concept for startup–investor trust</span></dd>
+        </div>
+        <div class="now__item reveal">
+          <dt>Researching</dt>
+          <dd><a href="#ruhs">Healthcare access in Jaipur</a> <span>independent quantitative research</span></dd>
+        </div>
+        <div class="now__item reveal">
+          <dt>Interned at</dt>
+          <dd><a href="#experience">Youth<span class="digit">4</span>Water Plus</a> <span>water-policy research, UNICEF-supported project</span></dd>
+        </div>
+      </dl>
+
+      <div class="ctas reveal">
+        <a href="#work" class="btn btn--solid">View my work</a>
+        <a href="assets/documents/Gourish_Kumawat_Resume.pdf" class="btn" download>Résumé <span aria-hidden="true">↓</span></a>
+        <a href="https://www.linkedin.com/in/gourish-kumawat-948322313/" class="btn" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+      </div>
     </div>
   </section>
 
   <!-- ============ ABOUT ============ -->
-  <section class="section" id="about">
-    <div class="section__head">
-      <span class="section__num">01</span>
-      <h2 class="section__title">About</h2>
-    </div>
-    <div class="section__body about__body">
-      <p class="lede">I'm pursuing a BBA in Digital Business &amp; Entrepreneurship at IIM Bangalore and a B.S. in Management &amp; Public Policy at IIM Sambalpur, alongside each other.</p>
-      <p>I'm interested in entrepreneurship, product thinking, customer behaviour, business strategy and technology — mainly because I like figuring out how ideas turn into things people actually want to use. Most of what I build or research comes back to the same few questions: what problem does someone actually have, why do they choose one option over another, and what would make a product genuinely worth returning to.</p>
+  <section class="section section--mind" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <span class="sec-head__num">01</span>
+        <h2 class="sec-head__title" id="about-title" data-split>About</h2>
+      </header>
+
+      <div class="about">
+        <figure class="about__photo reveal">
+          <div class="polaroid">
+            <span class="polaroid__tape" aria-hidden="true"></span>
+            <div class="polaroid__img">
+              <img src="assets/images/profile.jpg" alt="Portrait of Gourish Kumawat" width="1165" height="1545" loading="lazy"
+                   onerror="this.closest('.polaroid__img').classList.add('polaroid__img--empty')" />
+              <span class="polaroid__placeholder" aria-hidden="true">GK</span>
+            </div>
+            <figcaption>Gourish Kumawat — BBA, IIM Bangalore &amp; B.S., IIM Sambalpur</figcaption>
+          </div>
+        </figure>
+
+        <div class="about__text">
+          <p class="lede reveal">I'm pursuing a BBA in Digital Business &amp; Entrepreneurship at IIM Bangalore and a B.S. in Management &amp; Public Policy at IIM Sambalpur, alongside each other.</p>
+          <p class="reveal">I'm interested in entrepreneurship, product thinking, customer behaviour, business strategy and technology — mainly because I like figuring out how ideas turn into things people actually want to use. Most of what I build or research comes back to the same few questions: what problem does someone actually have, why do they choose one option over another, and what would make a product genuinely worth returning to.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ============ EDUCATION ============ -->
-  <section class="section" id="education">
-    <div class="section__head">
-      <span class="section__num">02</span>
-      <h2 class="section__title">Education</h2>
-    </div>
-    <div class="section__body">
-      <ol class="timeline">
-        <li class="timeline__item">
-          <div class="timeline__marker" aria-hidden="true"></div>
-          <div class="timeline__content">
-            <p class="timeline__status">2025 — 2028 (expected)</p>
-            <h3 class="timeline__org">Indian Institute of Management Bangalore</h3>
-            <p class="timeline__role">BBA in Digital Business &amp; Entrepreneurship <span class="timeline__note">· online programme</span></p>
-          </div>
+  <section class="section section--mind" id="education" aria-labelledby="education-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <span class="sec-head__num">02</span>
+        <h2 class="sec-head__title" id="education-title" data-split>Education</h2>
+      </header>
+
+      <ol class="trail">
+        <li class="trail__item reveal">
+          <p class="trail__status">2025 — 2028 (expected)</p>
+          <h3 class="trail__org">Indian Institute of Management Bangalore</h3>
+          <p class="trail__role">BBA in Digital Business &amp; Entrepreneurship <span class="trail__note">· online programme</span></p>
         </li>
-        <li class="timeline__item">
-          <div class="timeline__marker" aria-hidden="true"></div>
-          <div class="timeline__content">
-            <p class="timeline__status">2025 — 2029 (expected)</p>
-            <h3 class="timeline__org">Indian Institute of Management Sambalpur</h3>
-            <p class="timeline__role">B.S. in Management &amp; Public Policy</p>
-          </div>
+        <li class="trail__item reveal">
+          <p class="trail__status">2025 — 2029 (expected)</p>
+          <h3 class="trail__org">Indian Institute of Management Sambalpur</h3>
+          <p class="trail__role">B.S. in Management &amp; Public Policy</p>
         </li>
-        <li class="timeline__item">
-          <div class="timeline__marker" aria-hidden="true"></div>
-          <div class="timeline__content">
-            <p class="timeline__status">Completed</p>
-            <h3 class="timeline__org">Teoler High School, Jaipur</h3>
-            <p class="timeline__role">Class 12 — PCM · 86.2%</p>
-          </div>
+        <li class="trail__item reveal">
+          <p class="trail__status">Completed</p>
+          <h3 class="trail__org">Teoler High School, Jaipur</h3>
+          <p class="trail__role">Class 12 — PCM · 86.2%</p>
         </li>
       </ol>
     </div>
   </section>
 
   <!-- ============ EXPERIENCE ============ -->
-  <section class="section" id="experience">
-    <div class="section__head">
-      <span class="section__num">03</span>
-      <h2 class="section__title">Experience</h2>
-    </div>
-    <div class="section__body">
-      <article class="experience-card">
-        <header class="experience-card__head">
-          <div>
-            <h3 class="experience-card__org">Youth4Water Plus</h3>
-            <p class="experience-card__role">Research Intern — Operation &amp; Maintenance (O&amp;M) Models for Multi-Village Piped Water Supply Schemes, Odisha</p>
-          </div>
-          <p class="experience-card__meta">Part of a UNICEF-supported Youth for Water Project, implemented by BGVS Odisha</p>
-        </header>
-        <p class="experience-card__summary">My contribution was primarily research and policy analysis, feeding into a broader team effort on how multi-village water schemes stay operational and financially sustainable after handover.</p>
-        <ul class="experience-card__list">
-          <li>Reviewed Jal Jeevan Mission resources and guidelines, and Odisha's O&amp;M framework</li>
-          <li>Examined institutional responsibilities across scheme stakeholders</li>
-          <li>Ran a comparative analysis of Indian and international O&amp;M models</li>
-          <li>Analysed physical, financial, operational and institutional sustainability</li>
-          <li>Studied long-term O&amp;M and EPC handover issues</li>
-          <li>Explored SCADA, GIS, IoT and analytics for digital monitoring</li>
-          <li>Contributed to a hybrid governance/O&amp;M model and helped structure recommendations and the final presentation</li>
-        </ul>
+  <section class="section section--mind" id="experience" aria-labelledby="experience-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <span class="sec-head__num">03</span>
+        <h2 class="sec-head__title" id="experience-title" data-split>Experience</h2>
+      </header>
+
+      <article class="ticket reveal">
+        <div class="ticket__stub" aria-hidden="true">
+          <span>Field notes</span>
+          <span>Odisha</span>
+        </div>
+        <div class="ticket__body">
+          <header class="ticket__head">
+            <div>
+              <h3 class="ticket__org">Youth<span class="digit">4</span>Water Plus</h3>
+              <p class="ticket__role">Research Intern — Operation &amp; Maintenance (O&amp;M) Models for Multi-Village Piped Water Supply Schemes, Odisha</p>
+            </div>
+            <p class="ticket__meta">Part of a UNICEF-supported Youth for Water Project, implemented by BGVS Odisha</p>
+          </header>
+          <p class="ticket__summary">My contribution was primarily research and policy analysis, feeding into a broader team effort on how multi-village water schemes stay operational and financially sustainable after handover.</p>
+          <ul class="ticket__list">
+            <li>Reviewed Jal Jeevan Mission resources and guidelines, and Odisha's O&amp;M framework</li>
+            <li>Examined institutional responsibilities across scheme stakeholders</li>
+            <li>Ran a comparative analysis of Indian and international O&amp;M models</li>
+            <li>Analysed physical, financial, operational and institutional sustainability</li>
+            <li>Studied long-term O&amp;M and EPC handover issues</li>
+            <li>Explored SCADA, GIS, IoT and analytics for digital monitoring</li>
+            <li>Contributed to a hybrid governance/O&amp;M model and helped structure recommendations and the final presentation</li>
+          </ul>
+        </div>
       </article>
     </div>
   </section>
 
-  <!-- ============ WORK — FEATURED PROJECT ============ -->
-  <section class="section section--dark" id="work">
-    <div class="section__head">
-      <span class="section__num">04</span>
-      <h2 class="section__title">Work</h2>
-    </div>
+  <!-- ============ WORK ============ -->
+  <section class="section section--sky" id="work" aria-labelledby="work-title">
+    <div class="stars stars--section" data-stars="30" aria-hidden="true"></div>
+    <div class="wrap">
+      <header class="sec-head">
+        <span class="sec-head__num">04</span>
+        <h2 class="sec-head__title" id="work-title" data-split>Work</h2>
+      </header>
 
-    <div class="section__body">
-      <div class="featured" id="vittamhub">
-        <div class="featured__intro">
-          <p class="featured__kicker">Featured 01 — Startup / Product Venture</p>
-          <h3 class="featured__title">VittamHub</h3>
-          <p class="featured__desc">A fintech platform concept focused on improving trust, transparency and information flow between startups and investors.</p>
-          <div class="featured__ctas">
-            <span class="tag tag--accent">Ongoing</span>
+      <!-- Featured 01 — VittamHub -->
+      <article class="project" id="vittamhub" aria-labelledby="vittamhub-title">
+        <div class="project__intro">
+          <p class="kicker reveal">Featured 01 — Startup / Product Venture</p>
+          <h3 class="project__title reveal" id="vittamhub-title">VittamHub</h3>
+          <p class="project__desc reveal">A fintech platform concept focused on improving trust, transparency and information flow between startups and investors.</p>
+          <div class="tags reveal">
+            <span class="tag tag--lit">Ongoing</span>
             <span class="tag">Hackathon 6.0 — two rounds</span>
           </div>
         </div>
 
-        <figure class="featured__shot">
-          <img src="assets/images/vittamhub/hero.png" alt="VittamHub product concept — startup trust score, investor interest and verification status on a sample startup profile" loading="lazy" />
+        <figure class="browser reveal" data-tilt>
+          <div class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><span>vittamhub</span></div>
+          <img src="assets/images/vittamhub/hero.png" alt="VittamHub product concept — startup trust score, investor interest and verification status on a sample startup profile" width="2986" height="1452" loading="lazy" />
         </figure>
 
-        <ol class="process">
-          <li class="process__step">
-            <span class="process__num">01</span>
-            <h4 class="process__title">Problem</h4>
-            <p class="process__text">Startups and investors operate with limited mutual visibility — founders struggle to be discovered credibly, and investors struggle to verify and track what they're looking at.</p>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num">01</span>
+            <h4 class="step__title">Problem</h4>
+            <p class="step__text">Startups and investors operate with limited mutual visibility — founders struggle to be discovered credibly, and investors struggle to verify and track what they're looking at.</p>
           </li>
-          <li class="process__step">
-            <span class="process__num">02</span>
-            <h4 class="process__title">Thinking</h4>
-            <p class="process__text">I mapped the problem from both sides — what founders need to be found and trusted, and what investors need to discover and evaluate efficiently — before settling on trust and information flow as the core gap.</p>
+          <li class="step reveal">
+            <span class="step__num">02</span>
+            <h4 class="step__title">Thinking</h4>
+            <p class="step__text">I mapped the problem from both sides — what founders need to be found and trusted, and what investors need to discover and evaluate efficiently — before settling on trust and information flow as the core gap.</p>
           </li>
-          <li class="process__step">
-            <span class="process__num">03</span>
-            <h4 class="process__title">Product concept</h4>
-            <p class="process__text">Designed around trust and verification, investor discovery, transparent startup information, post-investment tracking, and a business model that could sustain the platform.</p>
+          <li class="step reveal">
+            <span class="step__num">03</span>
+            <h4 class="step__title">Product concept</h4>
+            <p class="step__text">Designed around trust and verification, investor discovery, transparent startup information, post-investment tracking, and a business model that could sustain the platform.</p>
           </li>
-          <li class="process__step">
-            <span class="process__num">04</span>
-            <h4 class="process__title">Execution</h4>
-            <p class="process__text">Worked on the product and its web presence, building with AI-assisted development to take the concept from an idea to something demonstrable.</p>
+          <li class="step reveal">
+            <span class="step__num">04</span>
+            <h4 class="step__title">Execution</h4>
+            <p class="step__text">Worked on the product and its web presence, building with AI-assisted development to take the concept from an idea to something demonstrable.</p>
           </li>
-          <li class="process__step">
-            <span class="process__num">05</span>
-            <h4 class="process__title">Pitch</h4>
-            <p class="process__text">Pitched VittamHub at Hackathon 6.0 and progressed through two rounds of the competition.</p>
+          <li class="step reveal">
+            <span class="step__num">05</span>
+            <h4 class="step__title">Pitch</h4>
+            <p class="step__text">Pitched VittamHub at Hackathon 6.0 and progressed through two rounds of the competition.</p>
           </li>
         </ol>
-      </div>
+      </article>
 
-      <!-- ============ FEATURED 02 — RUHS RESEARCH ============ -->
-      <div class="featured featured--research" id="ruhs">
-        <div class="featured__intro">
-          <p class="featured__kicker">Featured 02 — Independent Research</p>
-          <h3 class="featured__title">Healthcare Access &amp; Marketing Research</h3>
-          <p class="featured__desc">RUHS Hospital, Jaipur — whether a low-cost, evidence-based outreach campaign could improve informed hospital choice among underserved communities.</p>
-          <div class="featured__ctas">
-            <span class="tag tag--accent">Independent project</span>
+      <!-- Featured 02 — RUHS research -->
+      <article class="project project--research" id="ruhs" aria-labelledby="ruhs-title">
+        <div class="project__intro">
+          <p class="kicker reveal">Featured 02 — Independent Research</p>
+          <h3 class="project__title project__title--long reveal" id="ruhs-title">Healthcare Access &amp; Marketing Research</h3>
+          <p class="project__desc reveal">RUHS Hospital, Jaipur — whether a low-cost, evidence-based outreach campaign could improve informed hospital choice among underserved communities.</p>
+          <div class="tags reveal">
+            <span class="tag tag--lit">Independent project</span>
             <span class="tag">Python · Geospatial analysis</span>
             <span class="tag">2026</span>
           </div>
         </div>
 
-        <dl class="ledger">
-          <div class="ledger__stat">
-            <dt class="ledger__label">Settlements mapped</dt>
-            <dd class="ledger__value">50<span class="ledger__unit">+</span></dd>
+        <dl class="stats">
+          <div class="stat reveal">
+            <dt class="stat__label">Settlements mapped</dt>
+            <dd class="stat__value"><span data-count="50">50</span><span class="stat__unit">+</span></dd>
           </div>
-          <div class="ledger__stat">
-            <dt class="ledger__label">Hypotheses tested</dt>
-            <dd class="ledger__value">8</dd>
+          <div class="stat reveal">
+            <dt class="stat__label">Hypotheses tested</dt>
+            <dd class="stat__value"><span data-count="8">8</span></dd>
           </div>
-          <div class="ledger__stat">
-            <dt class="ledger__label">Research report</dt>
-            <dd class="ledger__value">20,000<span class="ledger__unit"> words</span></dd>
+          <div class="stat reveal">
+            <dt class="stat__label">Research report</dt>
+            <dd class="stat__value"><span data-count="20000">20,000</span><span class="stat__unit"> words</span></dd>
           </div>
-          <div class="ledger__stat">
-            <dt class="ledger__label">Pilot budget ceiling</dt>
-            <dd class="ledger__value">₹10,000</dd>
+          <div class="stat reveal">
+            <dt class="stat__label">Pilot budget ceiling</dt>
+            <dd class="stat__value">₹<span data-count="10000">10,000</span></dd>
           </div>
         </dl>
 
-        <ol class="process">
-          <li class="process__step">
-            <span class="process__num">01</span>
-            <h4 class="process__title">Problem</h4>
-            <p class="process__text">RUHS is a newer public hospital in Jaipur; SMS is the older and far busier one. The starting assumption was that nearby low-income settlements simply did not know RUHS existed.</p>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num">01</span>
+            <h4 class="step__title">Problem</h4>
+            <p class="step__text">RUHS is a newer public hospital in Jaipur; SMS is the older and far busier one. The starting assumption was that nearby low-income settlements simply did not know RUHS existed.</p>
           </li>
-          <li class="process__step">
-            <span class="process__num">02</span>
-            <h4 class="process__title">Research</h4>
-            <p class="process__text">Reviewed academic literature on hospital choice, national survey data on why people avoid public facilities, and healthcare outreach case studies including Aravind Eye Care.</p>
+          <li class="step reveal">
+            <span class="step__num">02</span>
+            <h4 class="step__title">Research</h4>
+            <p class="step__text">Reviewed academic literature on hospital choice, national survey data on why people avoid public facilities, and healthcare outreach case studies including Aravind Eye Care.</p>
           </li>
-          <li class="process__step">
-            <span class="process__num">03</span>
-            <h4 class="process__title">Analysis</h4>
-            <p class="process__text">Built a geospatial dataset of 50+ settlements using Python, coordinate mapping and Haversine distance calculations, then scored each one for socioeconomic need — with every figure carrying a source, and gaps marked rather than estimated.</p>
+          <li class="step reveal">
+            <span class="step__num">03</span>
+            <h4 class="step__title">Analysis</h4>
+            <p class="step__text">Built a geospatial dataset of 50+ settlements using Python, coordinate mapping and Haversine distance calculations, then scored each one for socioeconomic need — with every figure carrying a source, and gaps marked rather than estimated.</p>
           </li>
-          <li class="process__step">
-            <span class="process__num">04</span>
-            <h4 class="process__title">Hypotheses</h4>
-            <p class="process__text">Tested eight explanations for hospital choice using the Health Belief Model and Theory of Planned Behaviour. The evidence did not support the original awareness-gap assumption — so I reframed the problem instead of defending it.</p>
+          <li class="step reveal">
+            <span class="step__num">04</span>
+            <h4 class="step__title">Hypotheses</h4>
+            <p class="step__text">Tested eight explanations for hospital choice using the Health Belief Model and Theory of Planned Behaviour. The evidence did not support the original awareness-gap assumption — so I reframed the problem instead of defending it.</p>
           </li>
-          <li class="process__step">
-            <span class="process__num">05</span>
-            <h4 class="process__title">Strategy</h4>
-            <p class="process__text">Designed a trusted-intermediary campaign and a quasi-experimental pilot within a ₹10,000 budget, including sample-size and power calculations and a pre-committed rule for dropping the campaign if the diagnosis proved wrong.</p>
+          <li class="step reveal">
+            <span class="step__num">05</span>
+            <h4 class="step__title">Strategy</h4>
+            <p class="step__text">Designed a trusted-intermediary campaign and a quasi-experimental pilot within a ₹10,000 budget, including sample-size and power calculations and a pre-committed rule for dropping the campaign if the diagnosis proved wrong.</p>
           </li>
         </ol>
-      </div>
+      </article>
 
-      <!-- ============ OTHER PROJECT ============ -->
-      <div class="other-work">
-        <p class="other-work__kicker">Also built</p>
-        <article class="project-row">
-          <div class="project-row__text">
-            <h3 class="project-row__title">Website Development — DEV Herbal / DEV Soap</h3>
-            <p class="project-row__desc">Built a website for a small homemade herbal-products business making soaps, incense (dhoop), hand wash, dish wash and liquid detergent — hands-on web development for a working local business.</p>
+      <!-- Also built -->
+      <div class="also reveal">
+        <p class="kicker">Also built</p>
+        <article class="also__row">
+          <div>
+            <h3 class="also__title">Website Development — DEV Herbal / DEV Soap</h3>
+            <p class="also__desc">Built a website for a small homemade herbal-products business making soaps, incense (dhoop), hand wash, dish wash and liquid detergent — hands-on web development for a working local business.</p>
           </div>
           <span class="tag">Web Development</span>
         </article>
@@ -323,43 +478,35 @@
   </section>
 
   <!-- ============ ACHIEVEMENTS ============ -->
-  <section class="section" id="achievements">
-    <div class="section__head">
-      <span class="section__num">05</span>
-      <h2 class="section__title">Achievements</h2>
-    </div>
-    <div class="section__body">
-      <ul class="achievements">
-        <li class="achievements__item">
-          <p class="achievements__text">Selected for dual undergraduate programmes at IIM Bangalore and IIM Sambalpur</p>
-        </li>
-        <li class="achievements__item">
-          <p class="achievements__text">Progressed through two rounds of Hackathon 6.0 with VittamHub</p>
-        </li>
-        <li class="achievements__item">
-          <p class="achievements__text">Represented Pratapgarh (RCA U16), Rajasthan in the Rajasthan State U16 Cricket Championship, 2021–22</p>
-        </li>
-        <li class="achievements__item">
-          <p class="achievements__text">Runner-up (team) at Aarohan 2.0, the Inter-IIM Sports Fest</p>
-        </li>
-        <li class="achievements__item">
-          <p class="achievements__text">Played competitive cricket at school, club and inter-institutional levels</p>
-        </li>
-      </ul>
+  <section class="section section--mind" id="achievements" aria-labelledby="achievements-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <span class="sec-head__num">05</span>
+        <h2 class="sec-head__title" id="achievements-title" data-split>Achievements</h2>
+      </header>
+
+      <ol class="wins">
+        <li class="wins__item reveal"><span class="wins__num" aria-hidden="true">i</span><p>Selected for dual undergraduate programmes at IIM Bangalore and IIM Sambalpur</p></li>
+        <li class="wins__item reveal"><span class="wins__num" aria-hidden="true">ii</span><p>Progressed through two rounds of Hackathon 6.0 with VittamHub</p></li>
+        <li class="wins__item reveal"><span class="wins__num" aria-hidden="true">iii</span><p>Represented Pratapgarh (RCA U16), Rajasthan in the Rajasthan State U16 Cricket Championship, 2021–22</p></li>
+        <li class="wins__item reveal"><span class="wins__num" aria-hidden="true">iv</span><p>Runner-up (team) at Aarohan 2.0, the Inter-IIM Sports Fest</p></li>
+        <li class="wins__item reveal"><span class="wins__num" aria-hidden="true">v</span><p>Played competitive cricket at school, club and inter-institutional levels</p></li>
+      </ol>
     </div>
   </section>
 
   <!-- ============ SKILLS ============ -->
-  <section class="section" id="skills">
-    <div class="section__head">
-      <span class="section__num">06</span>
-      <h2 class="section__title">Skills</h2>
-    </div>
-    <div class="section__body">
-      <div class="skills-grid">
-        <div class="skills-group">
-          <h3 class="skills-group__title">Research &amp; Analysis</h3>
-          <ul class="skills-group__list">
+  <section class="section section--mind" id="skills" aria-labelledby="skills-title">
+    <div class="wrap">
+      <header class="sec-head">
+        <span class="sec-head__num">06</span>
+        <h2 class="sec-head__title" id="skills-title" data-split>Skills</h2>
+      </header>
+
+      <div class="skills">
+        <div class="skills__group reveal">
+          <h3 class="skills__title">Research &amp; Analysis</h3>
+          <ul class="chips">
             <li>Research</li>
             <li>Data Analysis</li>
             <li>Geospatial Analysis</li>
@@ -368,9 +515,9 @@
             <li>Strategic Problem Solving</li>
           </ul>
         </div>
-        <div class="skills-group">
-          <h3 class="skills-group__title">Business &amp; Product</h3>
-          <ul class="skills-group__list">
+        <div class="skills__group reveal">
+          <h3 class="skills__title">Business &amp; Product</h3>
+          <ul class="chips">
             <li>Entrepreneurship</li>
             <li>Product Thinking</li>
             <li>Business Strategy</li>
@@ -378,16 +525,16 @@
             <li>Customer Understanding</li>
           </ul>
         </div>
-        <div class="skills-group">
-          <h3 class="skills-group__title">Marketing</h3>
-          <ul class="skills-group__list">
+        <div class="skills__group reveal">
+          <h3 class="skills__title">Marketing</h3>
+          <ul class="chips">
             <li>Marketing Strategy</li>
             <li>Social Media Marketing</li>
           </ul>
         </div>
-        <div class="skills-group">
-          <h3 class="skills-group__title">Technology</h3>
-          <ul class="skills-group__list">
+        <div class="skills__group reveal">
+          <h3 class="skills__title">Technology</h3>
+          <ul class="chips">
             <li>Python</li>
             <li>HTML</li>
             <li>CSS</li>
@@ -396,17 +543,17 @@
             <li>Generative AI Tools</li>
           </ul>
         </div>
-        <div class="skills-group">
-          <h3 class="skills-group__title">Tools</h3>
-          <ul class="skills-group__list">
+        <div class="skills__group reveal">
+          <h3 class="skills__title">Tools</h3>
+          <ul class="chips">
             <li>Microsoft Excel</li>
             <li>PowerPoint</li>
             <li>Canva</li>
           </ul>
         </div>
-        <div class="skills-group">
-          <h3 class="skills-group__title">Other</h3>
-          <ul class="skills-group__list">
+        <div class="skills__group reveal">
+          <h3 class="skills__title">Other</h3>
+          <ul class="chips">
             <li>Presentation &amp; Pitching</li>
             <li>Leadership</li>
             <li>Communication</li>
@@ -416,14 +563,11 @@
     </div>
   </section>
 
-  <!-- ============ INTERESTS ============ -->
-  <section class="section section--tight" id="interests">
-    <div class="section__head">
-      <span class="section__num">—</span>
-      <h2 class="section__title">Interests</h2>
-    </div>
-    <div class="section__body">
-      <ul class="interests">
+  <!-- ============ INTERESTS — a slow marquee ============ -->
+  <section class="interests" id="interests" aria-labelledby="interests-title">
+    <h2 class="sr-only" id="interests-title">Interests</h2>
+    <div class="marquee">
+      <ul class="marquee__track">
         <li>Entrepreneurship</li>
         <li>Product</li>
         <li>Startups</li>
@@ -436,36 +580,49 @@
   </section>
 
   <!-- ============ CONTACT ============ -->
-  <section class="section contact" id="contact">
-    <div class="section__head">
-      <span class="section__num">07</span>
-      <h2 class="section__title">Contact</h2>
-    </div>
-    <div class="section__body">
-      <p class="contact__lede">I'm looking for internships in product, strategy, research and growth — at startups, consulting and analytics teams, or anywhere the work involves figuring out why people choose what they choose. If that overlaps with what you're building, I'd like to hear from you.</p>
+  <section class="section section--sky contact" id="contact" aria-labelledby="contact-title">
+    <div class="stars stars--section" data-stars="45" aria-hidden="true"></div>
+    <div class="moon" aria-hidden="true"></div>
+    <div class="wrap">
+      <header class="sec-head">
+        <span class="sec-head__num">07</span>
+        <h2 class="sec-head__title" id="contact-title" data-split>Contact</h2>
+      </header>
 
-      <div class="contact__grid">
-        <a class="contact__card" href="mailto:bsmpp25gourishk@iimsambalpur.ac.in">
-          <span class="contact__label">Email</span>
-          <span class="contact__value">bsmpp25gourishk@iimsambalpur.ac.in</span>
-        </a>
-        <a class="contact__card" href="https://www.linkedin.com/in/gourish-kumawat-948322313/" target="_blank" rel="noopener">
-          <span class="contact__label">LinkedIn</span>
-          <span class="contact__value">/in/gourish-kumawat</span>
-        </a>
-        <a class="contact__card" href="assets/documents/Gourish_Kumawat_Resume.pdf" download>
-          <span class="contact__label">Résumé</span>
-          <span class="contact__value">Download PDF</span>
-        </a>
-      </div>
+      <p class="contact__lede reveal">I'm looking for internships in product, strategy, research and growth — at startups, consulting and analytics teams, or anywhere the work involves figuring out why people choose what they choose. If that overlaps with what you're building, I'd like to hear from you.</p>
+
+      <ul class="contact__list">
+        <li class="reveal">
+          <a class="contact__row" href="mailto:bsmpp25gourishk@iimsambalpur.ac.in">
+            <span class="contact__label">Email</span>
+            <span class="contact__value">bsmpp25gourishk@iimsambalpur.ac.in</span>
+            <span class="contact__arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+        <li class="reveal">
+          <a class="contact__row" href="https://www.linkedin.com/in/gourish-kumawat-948322313/" target="_blank" rel="noopener">
+            <span class="contact__label">LinkedIn</span>
+            <span class="contact__value">/in/gourish-kumawat</span>
+            <span class="contact__arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li class="reveal">
+          <a class="contact__row" href="assets/documents/Gourish_Kumawat_Resume.pdf" download>
+            <span class="contact__label">Résumé</span>
+            <span class="contact__value">Download PDF</span>
+            <span class="contact__arrow" aria-hidden="true">↓</span>
+          </a>
+        </li>
+      </ul>
     </div>
+    <div class="peek" aria-hidden="true"></div>
   </section>
 
 </main>
 
 <footer class="site-footer">
   <p>Gourish Kumawat — built with HTML, CSS &amp; JavaScript.</p>
-  <a href="#top">Back to top ↑</a>
+  <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
 </footer>
 
 <script src="script.js"></script>
