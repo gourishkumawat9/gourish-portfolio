@@ -371,6 +371,16 @@
     });
   }
 
+  /* ---------- About photo: duotone fades to full colour as it scrolls up ---------- */
+  var photo = $(".polaroid");
+  function renderPhoto() {
+    if (!photo) return;
+    var top = photo.getBoundingClientRect().top;
+    // Starts as the photo's top passes 85% of the screen; full colour by 35%.
+    var t = clamp((window.innerHeight * 0.85 - top) / (window.innerHeight * 0.5), 0, 1);
+    photo.style.setProperty("--color", t.toFixed(3));
+  }
+
   /* ---------- Magnetic buttons ---------- */
   if (finePointer && !reduceMotion) {
     $$(".btn, .contact__arrow").forEach(function (btn) {
@@ -478,6 +488,7 @@
     renderRuler();
     renderNav();
     renderTilts();
+    renderPhoto();
   }
   function onResize() {
     measureHero();
