@@ -26,7 +26,7 @@ gourish-portfolio/
 
 **Profile photo.** `assets/images/profile.jpg`, portrait orientation (the frame crops to 4:5). If the file is missing the hero falls back to a marked placeholder rather than breaking.
 
-**Cache busting.** `index.html` loads `style.css?v=2` and `script.js?v=2`. GitHub Pages lets browsers cache those files for about 10 minutes, so bump the number whenever either file changes, or visitors may get the new page with old styles.
+**Cache busting.** `index.html` loads `style.css?v=3` and `script.js?v=3`. GitHub Pages lets browsers cache those files for about 10 minutes, so bump the number whenever either file changes, or visitors may get the new page with old styles.
 
 **Deployment URL.** `index.html` sets `<link rel="canonical">` and the Open Graph tags to `https://gourishkumawat9.github.io/gourish-portfolio/`. If the site is deployed anywhere else, update those three URLs — otherwise link previews will point at the wrong place.
 

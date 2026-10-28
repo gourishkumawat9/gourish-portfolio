@@ -239,7 +239,7 @@
     if (birds) birds.style.opacity = (1 - clamp(b * 2.5, 0, 1)).toFixed(3);
 
     // The portal starts exactly over the (same-coloured) opening and grows past the corners.
-    var g = clamp((p - 0.6) / 0.32, 0, 1);
+    var g = clamp((p - 0.8) / 0.2, 0, 1);   // finishes at the end of the hero, so there's no empty pause
     if (g <= 0) {
       portal.style.clipPath = "ellipse(0px 0px at 50% 50%)";
     } else {

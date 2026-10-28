@@ -580,7 +580,7 @@ html:not(.js) .select-box__size { display: none; }
 /* =========================================================================
    NOW
    ========================================================================= */
-.now { padding-top: clamp(5rem, 14vh, 9rem); }
+.now { padding-top: clamp(2.5rem, 6vh, 3.5rem); }
 .now__statement {
   font-family: var(--font-display);
   font-size: clamp(2.2rem, 5vw, 4.5rem); line-height: 1.08;
