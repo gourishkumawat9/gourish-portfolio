@@ -615,11 +615,10 @@ html:not(.js) .select-box__size { display: none; }
   position: relative;
   background: var(--cream); color: var(--ink);
   padding: 14px 14px 0;
-  transform: rotate(-3.5deg);
   box-shadow: 12px 14px 0 rgba(10, 8, 30, 0.45);
   transition: transform 0.6s var(--ease-back);
 }
-.polaroid:hover { transform: rotate(0.5deg) translateY(-6px); }
+.polaroid:hover { transform: translateY(-6px); }
 .polaroid__tape {
   position: absolute; z-index: 2; top: -16px; left: 50%;
   width: 116px; height: 32px; margin-left: -58px;
