@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Bebas+Neue&family=Antonio:wght@400;500;600&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
 
-<link rel="stylesheet" href="style.css?v=6" />
+<link rel="stylesheet" href="style.css?v=7" />
 <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -39,11 +39,6 @@
   <p class="nav__status"><span class="nav__status-dot" aria-hidden="true"></span>Open to internships</p>
 
   <div class="nav__right">
-    <button class="sound" id="sound-toggle" type="button" aria-pressed="false">
-      <span class="sound__bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-      <span class="sound__label">Sound <span class="sound__state" aria-hidden="true">off</span></span>
-    </button>
-
     <nav class="nav__primary" aria-label="Primary">
       <ul>
         <li><a href="#work">Work</a></li>
@@ -247,7 +242,8 @@
       </dl>
 
       <div class="ctas reveal">
-        <a href="#work" class="btn btn--solid">View my work</a>
+        <a href="#experience" class="btn btn--solid">Internship</a>
+        <a href="#work" class="btn btn--solid">My projects</a>
         <a href="assets/documents/Gourish_Kumawat_Resume.pdf" class="btn" download>Résumé <span aria-hidden="true">↓</span></a>
         <a href="https://www.linkedin.com/in/gourish-kumawat-948322313/" class="btn" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
       </div>
@@ -356,122 +352,144 @@
         <h2 class="sec-head__title" id="work-title" data-split>Work</h2>
       </header>
 
-      <!-- Featured 01 — VittamHub -->
-      <article class="project" id="vittamhub" aria-labelledby="vittamhub-title">
-        <div class="project__intro">
-          <p class="kicker reveal">Featured 01 — Startup / Product Venture</p>
-          <h3 class="project__title reveal" id="vittamhub-title">VittamHub</h3>
-          <p class="project__desc reveal">A fintech platform concept focused on improving trust, transparency and information flow between startups and investors.</p>
-          <div class="tags reveal">
-            <span class="tag tag--lit">Ongoing</span>
-            <span class="tag">Hackathon 6.0 — two rounds</span>
+      <!-- Projects are grouped by field -->
+      <nav class="fields-jump reveal" aria-label="Project fields">
+        <a class="btn" href="#tech-projects">Tech <span class="fields-jump__count">2</span></a>
+        <a class="btn" href="#management-projects">Management <span class="fields-jump__count">1</span></a>
+      </nav>
+
+      <!-- ============ TECH ============ -->
+      <div class="field" id="tech-projects">
+        <header class="field__head reveal">
+          <h3 class="field__title">Tech</h3>
+          <span class="field__rule" aria-hidden="true"></span>
+          <p class="field__count">2 projects</p>
+        </header>
+
+        <article class="project" id="vittamhub" aria-labelledby="vittamhub-title">
+          <div class="project__intro">
+            <p class="kicker reveal">Tech 01 — Startup / Product Venture</p>
+            <h4 class="project__title reveal" id="vittamhub-title">VittamHub</h4>
+            <p class="project__desc reveal">A fintech platform concept focused on improving trust, transparency and information flow between startups and investors.</p>
+            <div class="tags reveal">
+              <span class="tag tag--lit">Ongoing</span>
+              <span class="tag">Hackathon 6.0 — two rounds</span>
+            </div>
           </div>
+
+          <figure class="browser reveal" data-tilt>
+            <div class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><span>vittamhub</span></div>
+            <img src="assets/images/vittamhub/hero.png" alt="VittamHub product concept — startup trust score, investor interest and verification status on a sample startup profile" width="2986" height="1452" loading="lazy" />
+          </figure>
+
+          <ol class="steps">
+            <li class="step reveal">
+              <span class="step__num">01</span>
+              <h5 class="step__title">Problem</h5>
+              <p class="step__text">Startups and investors operate with limited mutual visibility — founders struggle to be discovered credibly, and investors struggle to verify and track what they're looking at.</p>
+            </li>
+            <li class="step reveal">
+              <span class="step__num">02</span>
+              <h5 class="step__title">Thinking</h5>
+              <p class="step__text">I mapped the problem from both sides — what founders need to be found and trusted, and what investors need to discover and evaluate efficiently — before settling on trust and information flow as the core gap.</p>
+            </li>
+            <li class="step reveal">
+              <span class="step__num">03</span>
+              <h5 class="step__title">Product concept</h5>
+              <p class="step__text">Designed around trust and verification, investor discovery, transparent startup information, post-investment tracking, and a business model that could sustain the platform.</p>
+            </li>
+            <li class="step reveal">
+              <span class="step__num">04</span>
+              <h5 class="step__title">Execution</h5>
+              <p class="step__text">Worked on the product and its web presence, building with AI-assisted development to take the concept from an idea to something demonstrable.</p>
+            </li>
+            <li class="step reveal">
+              <span class="step__num">05</span>
+              <h5 class="step__title">Pitch</h5>
+              <p class="step__text">Pitched VittamHub at Hackathon 6.0 and progressed through two rounds of the competition.</p>
+            </li>
+          </ol>
+        </article>
+
+        <!-- DEV Herbal website -->
+        <div class="also reveal" id="devherbal">
+          <p class="kicker">Tech 02 — Also built</p>
+          <article class="also__row">
+            <div>
+              <h4 class="also__title">Website Development — DEV Herbal / DEV Soap</h4>
+              <p class="also__desc">Built a website for a small homemade herbal-products business making soaps, incense (dhoop), hand wash, dish wash and liquid detergent — hands-on web development for a working local business.</p>
+            </div>
+            <span class="tag">Web Development</span>
+          </article>
         </div>
+      </div>
 
-        <figure class="browser reveal" data-tilt>
-          <div class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><span>vittamhub</span></div>
-          <img src="assets/images/vittamhub/hero.png" alt="VittamHub product concept — startup trust score, investor interest and verification status on a sample startup profile" width="2986" height="1452" loading="lazy" />
-        </figure>
+      <!-- ============ MANAGEMENT ============ -->
+      <div class="field" id="management-projects">
+        <header class="field__head reveal">
+          <h3 class="field__title">Management</h3>
+          <span class="field__rule" aria-hidden="true"></span>
+          <p class="field__count">1 project</p>
+        </header>
 
-        <ol class="steps">
-          <li class="step reveal">
-            <span class="step__num">01</span>
-            <h4 class="step__title">Problem</h4>
-            <p class="step__text">Startups and investors operate with limited mutual visibility — founders struggle to be discovered credibly, and investors struggle to verify and track what they're looking at.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step__num">02</span>
-            <h4 class="step__title">Thinking</h4>
-            <p class="step__text">I mapped the problem from both sides — what founders need to be found and trusted, and what investors need to discover and evaluate efficiently — before settling on trust and information flow as the core gap.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step__num">03</span>
-            <h4 class="step__title">Product concept</h4>
-            <p class="step__text">Designed around trust and verification, investor discovery, transparent startup information, post-investment tracking, and a business model that could sustain the platform.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step__num">04</span>
-            <h4 class="step__title">Execution</h4>
-            <p class="step__text">Worked on the product and its web presence, building with AI-assisted development to take the concept from an idea to something demonstrable.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step__num">05</span>
-            <h4 class="step__title">Pitch</h4>
-            <p class="step__text">Pitched VittamHub at Hackathon 6.0 and progressed through two rounds of the competition.</p>
-          </li>
-        </ol>
-      </article>
+        <article class="project project--research" id="ruhs" aria-labelledby="ruhs-title">
+          <div class="project__intro">
+            <p class="kicker reveal">Management 01 — Independent Research</p>
+            <h4 class="project__title project__title--long reveal" id="ruhs-title">Healthcare Access &amp; Marketing Research</h4>
+            <p class="project__desc reveal">RUHS Hospital, Jaipur — whether a low-cost, evidence-based outreach campaign could improve informed hospital choice among underserved communities.</p>
+            <div class="tags reveal">
+              <span class="tag tag--lit">Independent project</span>
+              <span class="tag">Python · Geospatial analysis</span>
+              <span class="tag">2026</span>
+            </div>
+          </div>
 
-      <!-- Featured 02 — RUHS research -->
-      <article class="project project--research" id="ruhs" aria-labelledby="ruhs-title">
-        <div class="project__intro">
-          <p class="kicker reveal">Featured 02 — Independent Research</p>
-          <h3 class="project__title project__title--long reveal" id="ruhs-title">Healthcare Access &amp; Marketing Research</h3>
-          <p class="project__desc reveal">RUHS Hospital, Jaipur — whether a low-cost, evidence-based outreach campaign could improve informed hospital choice among underserved communities.</p>
-          <div class="tags reveal">
-            <span class="tag tag--lit">Independent project</span>
-            <span class="tag">Python · Geospatial analysis</span>
-            <span class="tag">2026</span>
-          </div>
-        </div>
+          <dl class="stats">
+            <div class="stat reveal">
+              <dt class="stat__label">Settlements mapped</dt>
+              <dd class="stat__value"><span data-count="50">50</span><span class="stat__plus">+</span></dd>
+            </div>
+            <div class="stat reveal">
+              <dt class="stat__label">Hypotheses tested</dt>
+              <dd class="stat__value"><span data-count="8">8</span></dd>
+            </div>
+            <div class="stat reveal">
+              <dt class="stat__label">Research report</dt>
+              <dd class="stat__value"><span data-count="20000">20,000</span><span class="stat__unit"> words</span></dd>
+            </div>
+            <div class="stat reveal">
+              <dt class="stat__label">Pilot budget ceiling</dt>
+              <dd class="stat__value">₹<span data-count="10000">10,000</span></dd>
+            </div>
+          </dl>
 
-        <dl class="stats">
-          <div class="stat reveal">
-            <dt class="stat__label">Settlements mapped</dt>
-            <dd class="stat__value"><span data-count="50">50</span><span class="stat__plus">+</span></dd>
-          </div>
-          <div class="stat reveal">
-            <dt class="stat__label">Hypotheses tested</dt>
-            <dd class="stat__value"><span data-count="8">8</span></dd>
-          </div>
-          <div class="stat reveal">
-            <dt class="stat__label">Research report</dt>
-            <dd class="stat__value"><span data-count="20000">20,000</span><span class="stat__unit"> words</span></dd>
-          </div>
-          <div class="stat reveal">
-            <dt class="stat__label">Pilot budget ceiling</dt>
-            <dd class="stat__value">₹<span data-count="10000">10,000</span></dd>
-          </div>
-        </dl>
-
-        <ol class="steps">
-          <li class="step reveal">
-            <span class="step__num">01</span>
-            <h4 class="step__title">Problem</h4>
-            <p class="step__text">RUHS is a newer public hospital in Jaipur; SMS is the older and far busier one. The starting assumption was that nearby low-income settlements simply did not know RUHS existed.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step__num">02</span>
-            <h4 class="step__title">Research</h4>
-            <p class="step__text">Reviewed academic literature on hospital choice, national survey data on why people avoid public facilities, and healthcare outreach case studies including Aravind Eye Care.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step__num">03</span>
-            <h4 class="step__title">Analysis</h4>
-            <p class="step__text">Built a geospatial dataset of 50+ settlements using Python, coordinate mapping and Haversine distance calculations, then scored each one for socioeconomic need — with every figure carrying a source, and gaps marked rather than estimated.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step__num">04</span>
-            <h4 class="step__title">Hypotheses</h4>
-            <p class="step__text">Tested eight explanations for hospital choice using the Health Belief Model and Theory of Planned Behaviour. The evidence did not support the original awareness-gap assumption — so I reframed the problem instead of defending it.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step__num">05</span>
-            <h4 class="step__title">Strategy</h4>
-            <p class="step__text">Designed a trusted-intermediary campaign and a quasi-experimental pilot within a ₹10,000 budget, including sample-size and power calculations and a pre-committed rule for dropping the campaign if the diagnosis proved wrong.</p>
-          </li>
-        </ol>
-      </article>
-
-      <!-- Also built -->
-      <div class="also reveal">
-        <p class="kicker">Also built</p>
-        <article class="also__row">
-          <div>
-            <h3 class="also__title">Website Development — DEV Herbal / DEV Soap</h3>
-            <p class="also__desc">Built a website for a small homemade herbal-products business making soaps, incense (dhoop), hand wash, dish wash and liquid detergent — hands-on web development for a working local business.</p>
-          </div>
-          <span class="tag">Web Development</span>
+          <ol class="steps">
+            <li class="step reveal">
+              <span class="step__num">01</span>
+              <h5 class="step__title">Problem</h5>
+              <p class="step__text">RUHS is a newer public hospital in Jaipur; SMS is the older and far busier one. The starting assumption was that nearby low-income settlements simply did not know RUHS existed.</p>
+            </li>
+            <li class="step reveal">
+              <span class="step__num">02</span>
+              <h5 class="step__title">Research</h5>
+              <p class="step__text">Reviewed academic literature on hospital choice, national survey data on why people avoid public facilities, and healthcare outreach case studies including Aravind Eye Care.</p>
+            </li>
+            <li class="step reveal">
+              <span class="step__num">03</span>
+              <h5 class="step__title">Analysis</h5>
+              <p class="step__text">Built a geospatial dataset of 50+ settlements using Python, coordinate mapping and Haversine distance calculations, then scored each one for socioeconomic need — with every figure carrying a source, and gaps marked rather than estimated.</p>
+            </li>
+            <li class="step reveal">
+              <span class="step__num">04</span>
+              <h5 class="step__title">Hypotheses</h5>
+              <p class="step__text">Tested eight explanations for hospital choice using the Health Belief Model and Theory of Planned Behaviour. The evidence did not support the original awareness-gap assumption — so I reframed the problem instead of defending it.</p>
+            </li>
+            <li class="step reveal">
+              <span class="step__num">05</span>
+              <h5 class="step__title">Strategy</h5>
+              <p class="step__text">Designed a trusted-intermediary campaign and a quasi-experimental pilot within a ₹10,000 budget, including sample-size and power calculations and a pre-committed rule for dropping the campaign if the diagnosis proved wrong.</p>
+            </li>
+          </ol>
         </article>
       </div>
     </div>
@@ -625,6 +643,6 @@
   <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
 </footer>
 
-<script src="script.js?v=6"></script>
+<script src="script.js?v=7"></script>
 </body>
 </html>

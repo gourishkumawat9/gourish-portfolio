@@ -173,7 +173,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .nav__right { margin-left: auto; display: flex; align-items: center; gap: clamp(0.9rem, 2vw, 1.9rem); }
 
 .nav__primary ul { display: none; gap: clamp(1rem, 2vw, 1.9rem); }
-.nav__primary a, .nav__resume, .sound, .nav__menu {
+.nav__primary a, .nav__resume, .nav__menu {
   font-family: var(--font-label); font-size: 1.6rem; letter-spacing: 0.03em; line-height: 1;
 }
 .nav__primary a {
@@ -193,25 +193,6 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 }
 .nav__resume:hover { background: var(--cream); color: var(--ink); }
 
-.sound { display: inline-flex; align-items: center; gap: 0.55rem; min-height: 44px; }
-.sound__bars { display: inline-flex; align-items: flex-end; gap: 3px; height: 16px; }
-.sound__bars i {
-  width: 3px; height: 100%; background: currentColor; border-radius: 2px;
-  transform-origin: bottom; transform: scaleY(0.25);
-  transition: transform 0.3s var(--ease);
-}
-.sound__bars i:nth-child(2) { transform: scaleY(0.45); }
-.sound[aria-pressed="true"] .sound__bars i { animation: eq 0.9s ease-in-out infinite alternate; }
-.sound[aria-pressed="true"] .sound__bars i:nth-child(2) { animation-duration: 0.6s; }
-.sound[aria-pressed="true"] .sound__bars i:nth-child(3) { animation-duration: 0.75s; animation-delay: -0.2s; }
-.sound[aria-pressed="true"] .sound__bars i:nth-child(4) { animation-duration: 1.05s; animation-delay: -0.4s; }
-@keyframes eq { 0% { transform: scaleY(0.2); } 100% { transform: scaleY(1); } }
-/* Below 760px only the bars show; the label stays for screen readers. */
-.sound__label {
-  position: absolute; width: 1px; height: 1px; margin: -1px;
-  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap;
-}
-
 .nav__menu { display: inline-flex; align-items: center; gap: 0.6rem; min-height: 44px; }
 .nav__menu-icon { position: relative; width: 26px; height: 12px; }
 .nav__menu-icon i {
@@ -225,7 +206,6 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 
 @media (min-width: 760px) {
   .nav__status { display: inline-flex; }
-  .sound__label { position: static; width: auto; height: auto; margin: 0; overflow: visible; clip: auto; }
 }
 @media (min-width: 1080px) {
   .nav__primary ul { display: flex; }
@@ -277,9 +257,8 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   transition: opacity 0.4s var(--ease);
 }
 .menu-open .ruler { opacity: 0; }
-/* Label positions, the sound toggle and the index all come from script.js */
+/* Label positions and the index come from script.js */
 html:not(.js) .ruler,
-html:not(.js) .sound,
 html:not(.js) .nav__menu,
 html:not(.js) .select-box__size { display: none; }
 .ruler__ticks {
@@ -752,7 +731,30 @@ html:not(.js) .select-box__size { display: none; }
 /* =========================================================================
    WORK
    ========================================================================= */
-.project + .project { margin-top: clamp(5rem, 10vw, 8rem); padding-top: clamp(4rem, 8vw, 6rem); border-top: 2px dashed rgba(245, 239, 225, 0.4); }
+/* Projects are grouped by field (Tech, Management), each opening with a
+   chapter-style divider: title, a dashed rule, and a project count. */
+.fields-jump { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-bottom: clamp(3.5rem, 7vw, 5.5rem); }
+.fields-jump__count {
+  display: inline-grid; place-items: center;
+  min-width: 1.6em; height: 1.6em; padding: 0.1em 0.3em 0;
+  border-radius: 999px; background: var(--marigold); color: var(--ink);
+  font-size: 0.8em; line-height: 1;
+}
+.field + .field { margin-top: clamp(6rem, 12vw, 9rem); }
+.field__head {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem clamp(0.8rem, 2vw, 1.5rem);
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+.field__title {
+  font-family: var(--font-display); text-transform: uppercase;
+  font-size: clamp(1.9rem, 5vw, 4.2rem); line-height: 1; letter-spacing: 0.01em;
+}
+.field__rule { flex: 1; min-width: 1.5rem; border-top: 2px dashed rgba(245, 239, 225, 0.5); }
+.field__count {
+  font-family: var(--font-label); font-size: 1.2rem; letter-spacing: 0.06em; line-height: 1;
+  padding: 0.45rem 0.85rem 0.35rem; border: 1.5px solid currentColor; border-radius: 999px;
+  white-space: nowrap;
+}
 .project__intro { max-width: 900px; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
 .project__title {
   font-family: var(--font-display); text-transform: uppercase;

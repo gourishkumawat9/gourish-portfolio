@@ -2,7 +2,7 @@
 
 Personal portfolio and résumé website, built with plain HTML, CSS and vanilla JavaScript. No build step, no dependencies.
 
-One continuous page that reads as a short story: an illustrated Gourish waves hello, the top of his head lifts open as you scroll, and the page dives inside. Hero → Now → About → Education → Experience → Work (VittamHub + RUHS research + DEV Herbal) → Achievements → Skills → Interests → Contact.
+One continuous page that reads as a short story: an illustrated Gourish waves hello, the top of his head lifts open as you scroll, and the page dives inside. Hero → Now → About → Education → Experience → Work (grouped by field — Tech: VittamHub, DEV Herbal website · Management: RUHS research) → Achievements → Skills → Interests → Contact.
 
 ## Structure
 
@@ -26,7 +26,7 @@ gourish-portfolio/
 
 **Profile photo.** `assets/images/profile.jpg`, portrait orientation (the frame crops to 4:5). If the file is missing the hero falls back to a marked placeholder rather than breaking.
 
-**Cache busting.** `index.html` loads `style.css?v=6` and `script.js?v=6`. GitHub Pages lets browsers cache those files for about 10 minutes, so bump the number whenever either file changes, or visitors may get the new page with old styles.
+**Cache busting.** `index.html` loads `style.css?v=7` and `script.js?v=7`. GitHub Pages lets browsers cache those files for about 10 minutes, so bump the number whenever either file changes, or visitors may get the new page with old styles.
 
 **Deployment URL.** `index.html` sets `<link rel="canonical">` and the Open Graph tags to `https://gourishkumawat9.github.io/gourish-portfolio/`. If the site is deployed anywhere else, update those three URLs — otherwise link previews will point at the wrong place.
 
@@ -56,7 +56,6 @@ All in vanilla JS and CSS; there are no libraries.
 - **Ambient details** — the waving arm, blinking eyes, pupils that follow the pointer, birds, the selection box that measures the name live, and a roaming "Gourish" cursor.
 - **Sections** — titles split into letters that rise in, staggered reveals, count-up stats, a tilting product screenshot, magnetic buttons, an Interests marquee, and the character peeking up at Contact.
 - **Scroll ruler** — a fixed tick-mark ruler at the bottom with section labels placed at their real scroll positions and a marigold playhead.
-- **Sound** — off by default. When toggled on it plays a soft WebAudio chord with occasional chimes. It is synthesised, so there are no audio files.
 
 `prefers-reduced-motion` turns all of this off: the hero stays one screen tall, the lid sits slightly ajar, and every section renders in its final state.
 
@@ -67,5 +66,4 @@ Audited with axe-core (WCAG 2.1 A/AA + best practice) at 1440px, 820px and 390px
 - The bottom ruler duplicates navigation, so it is `aria-hidden` and its links carry `tabindex="-1"`.
 - Split-letter titles keep the real text in an `.sr-only` span; the animated letters are `aria-hidden`.
 - The illustration has a `<title>`; the thoughts, stars, birds, cursor and grain are decorative and hidden from assistive tech.
-- The sound button uses `aria-pressed` with a stable name ("Sound"); the on/off word is visual only.
 - Without JavaScript every section is visible, and controls that need script are hidden.

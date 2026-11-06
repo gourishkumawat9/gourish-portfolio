@@ -1,7 +1,7 @@
 /* Gourish Kumawat — portfolio interactions
    Hero scroll scene (the head opens, then the inside fills the screen),
-   section reveals, scroll ruler, index overlay, eyes that follow the
-   pointer, and an optional ambient soundscape. No dependencies. */
+   section reveals, scroll ruler, index overlay and eyes that follow the
+   pointer. No dependencies. */
 
 (function () {
   "use strict";
@@ -391,94 +391,6 @@
         btn.style.translate = x.toFixed(1) + "px " + y.toFixed(1) + "px";
       });
       btn.addEventListener("pointerleave", function () { btn.style.translate = ""; });
-    });
-  }
-
-  /* ---------- Ambient sound (off by default; synthesised, no audio files) ---------- */
-  var soundBtn = $("#sound-toggle");
-  var soundState = $(".sound__state");
-  var audio = null;
-  var soundOn = false;
-  var sparkleTimer = null;
-
-  function buildAudio() {
-    var Ctx = window.AudioContext || window.webkitAudioContext;
-    if (!Ctx) return null;
-    var ctx = new Ctx();
-    var master = ctx.createGain();
-    master.gain.value = 0;
-    master.connect(ctx.destination);
-    var filter = ctx.createBiquadFilter();
-    filter.type = "lowpass";
-    filter.frequency.value = 650;
-    filter.Q.value = 0.6;
-    filter.connect(master);
-    // A soft, slowly breathing chord: A, E, A, C♯
-    [110, 164.81, 220, 277.18].forEach(function (f, i) {
-      var o = ctx.createOscillator();
-      var g = ctx.createGain();
-      o.type = i % 2 ? "triangle" : "sine";
-      o.frequency.value = f;
-      o.detune.value = (i - 1.5) * 5;
-      g.gain.value = [0.5, 0.2, 0.16, 0.07][i];
-      o.connect(g);
-      g.connect(filter);
-      o.start();
-    });
-    var lfo = ctx.createOscillator();
-    var lfoGain = ctx.createGain();
-    lfo.frequency.value = 0.06;
-    lfoGain.gain.value = 280;
-    lfo.connect(lfoGain);
-    lfoGain.connect(filter.frequency);
-    lfo.start();
-    return { ctx: ctx, master: master };
-  }
-
-  function chime(freq, vol, len) {
-    if (!audio || !soundOn) return;
-    var ctx = audio.ctx;
-    var o = ctx.createOscillator();
-    var g = ctx.createGain();
-    var now = ctx.currentTime;
-    o.type = "sine";
-    o.frequency.value = freq;
-    g.gain.setValueAtTime(0, now);
-    g.gain.linearRampToValueAtTime(vol, now + 0.02);
-    g.gain.exponentialRampToValueAtTime(0.0001, now + len);
-    o.connect(g);
-    g.connect(ctx.destination);
-    o.start(now);
-    o.stop(now + len + 0.05);
-  }
-  var pentatonic = [880, 987.77, 1108.73, 1318.51, 1479.98, 1760];
-  function sparkle() {
-    chime(pentatonic[Math.floor(Math.random() * pentatonic.length)], 0.025, 2.2);
-    sparkleTimer = setTimeout(sparkle, 2600 + Math.random() * 3200);
-  }
-
-  function setSound(on) {
-    soundOn = on;
-    soundBtn.setAttribute("aria-pressed", String(on));
-    soundState.textContent = on ? "on" : "off";
-    if (on) {
-      if (!audio) audio = buildAudio();
-      if (!audio) return;
-      audio.ctx.resume();
-      audio.master.gain.cancelScheduledValues(audio.ctx.currentTime);
-      audio.master.gain.setTargetAtTime(0.06, audio.ctx.currentTime, 0.9);
-      clearTimeout(sparkleTimer);
-      sparkleTimer = setTimeout(sparkle, 1200);
-    } else if (audio) {
-      clearTimeout(sparkleTimer);
-      audio.master.gain.cancelScheduledValues(audio.ctx.currentTime);
-      audio.master.gain.setTargetAtTime(0, audio.ctx.currentTime, 0.25);
-    }
-  }
-  if (soundBtn) {
-    soundBtn.addEventListener("click", function () { setSound(!soundOn); });
-    $$(".nav a, .btn, .menu a, .contact__row, .chips li").forEach(function (el) {
-      el.addEventListener("pointerenter", function () { chime(1318.51 + Math.random() * 300, 0.018, 0.25); });
     });
   }
 
